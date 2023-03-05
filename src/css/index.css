@@ -1,60 +1,35 @@
-@import url("./assembly/body.css");
-@import url("./assembly/header.css");
-@import url("./assembly/sbottom.css");
-@import url("./assembly/content-show.css");
-@import url("./assembly/layout.css");
-@import url("./assembly/paging.css");
-@import url("./assembly/banner.css");
 
-.layout .catalogue {
-    min-width: 20%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* font-family: cursive; */
+    word-break: break-all;
+    overflow:hidden; 
 }
-
-.layout .label {
-    min-width: 20%;
+html {
+    font-size: 16px;
+    font-family: sans-serif;
 }
-
-.layout .layout-content>.articles {
-    width: 100%; 
-    grid-template-columns: repeat(2, 1fr);
+.example_video{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
 }
-.layout .layout-content>.articles>div>.div_s .div_p{
-
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    padding: 0rem 0rem;
-
+img {
+   
+    width: 100vw; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit:scale-down; 
+    z-index: 100;
 }
-
-@media screen and (max-width:991px) {
-    .layout .layout-content{
-        width: 80%;
-        max-width: none;
-    }
-    .layout .layout-content>.articles {
-        width: 75%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .layout .catalogue {
-        display: none;
-
-    }
-    .layout .label{
-        display: none;
-    }
-    
-}
-
-@media screen and (max-width:600px) {
-    .layout .layout-content{
-        width: 100%;
-        max-width: none;
-    }
-    .layout .layout-content>.articles {
-        width: 90%;
-        /* grid-template-columns: repeat(1, 1fr); */
-
-    }
+.display
+{
+    display: none;
 }

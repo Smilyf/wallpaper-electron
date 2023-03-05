@@ -35,7 +35,7 @@ app.on('ready', () => {
         event.red("announce_article_reply", message);
 
     })
-    mainWindow.loadFile('./src/indexx.html')
+    mainWindow.loadFile('./src/html/index.html')
     let hwnd = mainWindow.getNativeWindowHandle();
     // console.log(hwnd)
     // console.log(hwnd.readUInt32LE(0))
@@ -63,7 +63,7 @@ function runExec(e) {
     let cmdStr = 'replace_wallpaper.exe ' + e
     let workerProcess
     // 执行命令行，如果命令不需要路径，或就是项目根目录，则不需要cwd参数：
-    workerProcess = exec(cmdStr,{})
+    workerProcess = exec(cmdStr,{cwd:"./src/exe"})
     // 不受child_process默认的缓冲区大小的使用方法，没参数也要写上{}：workerProcess = exec(cmdStr, {})
     // 打印正常的后台可执行程序输出
     workerProcess.stdout.on('data', function (data) {
