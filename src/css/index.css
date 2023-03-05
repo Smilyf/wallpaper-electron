@@ -7,11 +7,18 @@
     word-break: break-all;
     overflow:hidden; 
 }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(206, 206, 206, 0);
+}
 html {
     font-size: 16px;
     font-family: sans-serif;
 }
-.example_video{
+video{
     width: 100vw;
     height: 100vh;
     position: fixed;
